@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <script>
+            const a = [0,1,2,3,4,5,6,7]
+            
+            const a1 = a.map(x => x * 2)
+            
+            console.log(a1)
+
+            const a2 = a.map((element, index, array) => `a[${index}]=${element}`)
+            console.log(a2)
+
+            const a3 = a.filter(e => !(e % 2))
+            console.log(a3)
+
+            const b0 = a.some(e => !(e % 3))
+            console.log(b0)
+
+            const b1 = a.every(e => !(e % 3))
+            console.log(b1)
+
+            const e1 = a.find(e => e === 8)
+            console.log(e1)
+            const n1 = a.findIndex(e => e === 8)
+            console.log(n1)
+
+            const n2 = a.reduce((a, e) => a + e, 0)
+            console.log(n2)
+
+            const a4 = [[1], [1,2], [1,2,3]]
+            const a5 = a4.reduce((a, e) => a.concat(e), [])
+            console.log(a5)
+            const a6 = a4.reduceRight((a, e) => a.concat(e), [])
+            console.log(a6)
+
+        </script>
+    </head>
+</html>

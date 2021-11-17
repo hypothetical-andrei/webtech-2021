@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <script>
+            let g = function (base) {
+                return function (x) {
+                    base += x
+                    return base
+                }
+            }
+
+            let tenAdder = g(10)
+            let hundredAdder = g(100)
+
+            console.log(tenAdder(1))
+            console.log(tenAdder(1))
+            console.log(hundredAdder(1))
+            console.log(tenAdder(1))
+
+        </script>
+    </head>
+</html>

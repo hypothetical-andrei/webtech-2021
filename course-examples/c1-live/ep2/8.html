@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script>
+            let a = [0,1,2,3,4,5,6,7]
+            let a1 = a.map(x => x * 2)
+            console.log(a1)
+            let a2 = a.map((element, index, array) => `a[${index}]=${element}`)
+            console.log(a2)
+            let a3 = a.filter(x => x > 3)
+            console.log(a3)
+            let b1 = a.some(x => x > 3)
+            console.log(b1)
+            let b2 = a.every(x => x > 3)
+            console.log(b2)
+            const n1 = a.find(x => x > 10)
+            console.log(n1)
+            const n2 = a.findIndex(x => x > 10)
+            console.log(n2)
+            let n3 = a.reduce((a, e) => a + e, 0)
+            console.log(n3)
+            let a4 = [[1,2,3], [1], [1, 2]]
+            let a5 = a4.reduce((a, e) => a.concat(e), [])
+            console.log(a5)
+            let a6 = a4.reduceRight((a, e) => a.concat(e), [])
+            console.log(a6)
+            let result = a.filter(e => !(e % 2)).map(e => e / 2).reduce((a, e) => a + e, 0)
+            console.log(result)
+        </script>
+    </head>
+</html>

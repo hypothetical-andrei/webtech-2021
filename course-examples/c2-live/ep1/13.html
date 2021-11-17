@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <script>
+            try {
+                console.warn('before error')
+                throw new Error('some error')
+                console.warn('after error')
+            } catch (err) {
+                console.warn(err)
+            }
+        </script>
+    </head>
+</html>

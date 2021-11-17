@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <script>
+            function A (a) {
+                this.a = a
+                this.doParent = function () {
+                    console.log('parent ' + this.a)
+                }
+            }
+
+            A.prototype.doParentProto = function () {
+                console.log('parent proto ' + this.a)
+            }
+
+            const a = new A(1)
+            a.doParent()
+            a.doParentProto()
+
+            console.log(A.prototype.constructor === A)
+
+            function B (a, b) {
+                A.call(this, a)
+                this.b = b
+                this.doChild = function () {
+                    console.log('child ' + this.a + ' ' + this.b)
+                }
+            }
+
+            B.prototype = Object.create(A.prototype)
+
+            const b = new B(3, 4)
+            b.doChild()
+            b.doParent()
+            b.doParentProto()
+
+        </script>
+    </head>
+</html>

@@ -1,0 +1,7 @@
+input[type] {
+    background-color: blueviolet;
+}
+
+input[type=password] {
+    background-color: red;
+}

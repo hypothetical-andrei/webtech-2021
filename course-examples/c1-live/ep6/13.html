@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#target {
+			height: 200px;
+			width: 200px;
+			border: 5px dashed tomato;
+			box-sizing: border-box;
+			animation-name: test;
+			animation-duration: 5s;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+			position: fixed;
+		}
+
+		@keyframes test {
+			0% {
+				left: 30vw;
+				top: 30vh;
+			}
+
+			25% {
+				left: 70vw;
+				top: 30vh;
+			}
+
+
+			50% {
+				left: 70vw;
+				top: 70vh;
+			}
+
+			75% {
+				left: 30vw;
+				top: 70vh;
+			}
+
+			100% {
+				left: 30vw;
+				top: 30vh;
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<div id="target">
+		1
+	</div>
+</body>
+</html>

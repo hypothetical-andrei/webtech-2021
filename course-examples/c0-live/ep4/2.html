@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <script>
+            class A {
+                #someprop
+                static #count = 0
+
+                constructor(v) {
+                    this.#someprop = v
+                    A.#count++
+                }
+
+                get someprop() {
+                    return this.#someprop
+                }
+
+                set someprop(v) {
+                    this.#someprop = v
+                }
+
+                static get count() {
+                    return A.#count
+                }
+            }
+
+            const a = new A(1)
+            console.log(a.someprop)
+            a.someprop = 2
+            console.log(a.someprop)
+            const a2 = new A(2)
+            console.log('total object count ' + A.count)
+
+        </script>
+    </head>
+</html>

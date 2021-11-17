@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <script>
+            window.onload = () => {
+                const clickHandler = (evt) => {
+                    console.log('hello')
+                }
+    
+                const input = document.getElementById('b1')
+    
+                input.onclick = clickHandler
+            }
+        </script>
+    </head>
+    <body>
+        <input type='button' value='click me!' id='b1' />
+    </body>
+</html>

@@ -1,0 +1,19 @@
+div[class] {
+    background-color: mediumspringgreen;
+}
+
+div[class^=abc] {
+    background-color: tomato;
+}
+
+div[class$=xyz] {
+    background-color: lightskyblue;
+}
+
+div[class*=abc] {
+    background-color: lime;
+}
+
+div[class~=abc] {
+    background-color: mediumorchid;
+}

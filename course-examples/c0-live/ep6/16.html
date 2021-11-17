@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.container {
+			height: 400px;
+			width: 200px;
+		}
+
+		.card {
+			display: grid;
+			grid-template-rows: max-content 200px 1fr;
+			box-shadow: 5px 2px 2px gray;
+			border: 1px solid gray;
+		}
+
+		.card img {
+			object-fit: scale-down;
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<article class="card">
+			<header>some header</header>
+			<img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Altair_8800_Computer.jpg">
+			<div class="content">
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+			</div>
+			<footer>footer text</footer>
+		</article>
+	</div>
+</body>
+</html>

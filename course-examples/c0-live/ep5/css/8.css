@@ -1,0 +1,17 @@
+/* 0-0-0-2 */
+div>span {
+   color:blueviolet; 
+}
+
+/* 0-0-0-2 */
+div span {
+   color: orange; 
+}
+
+img~div{
+    color: blue;
+}
+
+img+div{
+    color: red;
+}

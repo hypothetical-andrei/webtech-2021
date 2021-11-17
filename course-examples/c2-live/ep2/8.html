@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script>
+            function f0(callback) {
+                let n
+                setTimeout(() => {
+                    n = 100
+                    callback(n)
+                }, 1000)
+            }
+
+            function resultHandler(n) {
+                console.log(n)
+            }
+
+            f0(resultHandler)
+            
+        </script>
+    </head>
+</html>

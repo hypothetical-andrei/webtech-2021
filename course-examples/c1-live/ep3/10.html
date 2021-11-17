@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <script>
+            function g(){
+                let f = function() {
+                    console.log('inside')
+                }
+                return f
+            }
+
+            let f = g()
+
+            f()
+        </script>
+    </head>
+</html>

@@ -1,0 +1,19 @@
+li:first-child {
+    background-color: tomato;
+}
+
+li:last-child {
+    background-color: lightblue;
+}
+
+li:nth-child(4) {
+    background-color: lawngreen;
+}
+
+li:nth-child(odd) {
+    background-color: cyan;
+}
+
+li:nth-child(2n) {
+    background-color: magenta;
+}

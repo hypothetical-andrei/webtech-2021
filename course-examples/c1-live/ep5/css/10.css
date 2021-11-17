@@ -1,0 +1,12 @@
+div::first-letter {
+    font-size: 4em;
+}
+
+div::first-line {
+    font-size: 2em;
+}
+
+::selection {
+    background-color: black;
+    color: white;
+}

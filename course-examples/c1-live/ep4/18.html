@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <script>
+            window.onload = () => {
+                const d1 = document.getElementById('d1')
+                const d2 = document.getElementById('d2')
+                const d3 = document.querySelector('#d3')
+                d1.onclick = () => {
+                    console.log('d1 was clicked')
+                }
+                d2.onclick = (evt) => {
+                    console.log('d2 was clicked')
+                    evt.stopPropagation()
+                }
+                d3.onclick = () => {
+                    console.log('d3 was clicked')
+                }
+                const a1 = document.getElementById('a1')
+                a1.onclick = (evt) => {
+                    evt.preventDefault()
+                    alert('no can do, buckaroo')
+                }
+
+            }
+        </script>
+    </head>
+    <body>
+        <div id=d1>
+            <div id=d2>
+                <div id=d3>
+                    click me!
+                </div>
+            </div>
+        </div>
+        <a href='https://www.google.com' id=a1 target="_blank">to google</a>
+    </body>
+</html>

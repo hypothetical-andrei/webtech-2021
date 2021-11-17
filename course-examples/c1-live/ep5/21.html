@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                border:1px solid black;
+                box-sizing:border-box;
+            }
+
+            #container {
+                letter-spacing: -5px;
+            }
+
+            #container div {
+                height: 100px;
+                width: 100px;
+                display: inline-block;
+                text-align: center;
+                line-height: 100px;
+            }
+
+            #part1{
+                margin-top: 100px;
+                margin-right: 100px;
+            }
+
+            #part2{
+                margin-bottom: 100px;
+                margin-top: 200px;
+                margin-left: 100px;
+            }
+
+            #part3{
+                visibility: hidden;
+            }
+
+            #container #part4{
+                display: none;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id=container>
+            <div id=part1>1</div>
+            <div id=part2>2</div>
+            <div id=part3>3</div>
+            <div id=part4>4</div>
+            <div id=part5>5</div>
+        </div>
+    </body>
+</html>

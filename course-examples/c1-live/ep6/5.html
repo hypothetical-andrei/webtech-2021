@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+		#container1 {
+			display: grid;
+			background-color: lightgreen;
+			grid-template-columns: 30% repeat(4, 1fr) 100px;
+			grid-gap: 5px;
+		}
+
+		#container1>div {
+			border: 3px solid tomato;
+			box-sizing: border-box;
+		}
+
+		#container2 {
+			display: grid;
+			background-color: lightblue;
+			grid-template-columns: 30% repeat(2,0.5fr 1fr) 1fr;
+			grid-gap: 5px;
+		}
+
+		#container2>div {
+			border: 3px solid tomato;
+			box-sizing: border-box;
+		}
+	</style>
+</head>
+<body>
+	<div id="container1">
+		<div>
+			i am 30% wide
+		</div>
+		<div> i am a quarter of what's left</div>
+		<div> i am a quarter of what's left</div>
+		<div> i am a quarter of what's left</div>
+		<div> i am a quarter of what's left</div>
+		<div> i am fixed width</div>
+	</div>
+	<div id="container2">
+		<div>
+			i am 30% wide
+		</div>
+		<div> i am a quarter of what's left</div>
+		<div> i am an eight of what's left</div>
+		<div> i am a quarter of what's left</div>
+		<div> i am an eight of what's left</div>
+		<div> i am a quarter of what's left</div>
+	</div>
+</body>
+</html>

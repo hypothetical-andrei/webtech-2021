@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = () => {
+            document.getElementById('a1').addEventListener('click', (evt) => {
+                evt.preventDefault()
+                console.log('i was clicked')
+            })
+        }
+    </script>
+</head>
+<body>
+    <a href="https://google.com" id=a1>click me!</a>
+</body>
+</html>

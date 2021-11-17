@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <script>
+            function f0() {
+                return new Promise((resolve, reject) => {
+                    let x 
+                    setTimeout(() => {
+                        x = 100
+                        resolve(x)
+                    }, 1000)
+                })
+            }
+
+            function f1(x) {
+                return new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        resolve(x + 100)
+                    }, 2000)
+                })
+            }
+
+            function f2(x) {
+                return new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        resolve(x + 200)
+                    }, 3000)
+                })
+            }
+
+            f0().then((result) => {
+                return f1(result)
+            }).then((result) => {
+                return f2(result)
+            }).then((result) => {
+                console.log(result)
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+        </script>
+    </head>
+</html>

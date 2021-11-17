@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <script>
+            function g(base) {
+                let f = function(){
+                    let k = 5
+                    console.log('inside ' + base)
+                }
+                return f
+            }
+
+            let f1 = g(10)
+            f1()
+
+        </script>
+    </head>
+</html>
