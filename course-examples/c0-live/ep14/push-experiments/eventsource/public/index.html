@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    const SERVER = 'http://localhost:8080'
+
+
+    const reload = async () => {
+      const content = document.getElementById('content')
+      const response = await fetch(`${SERVER}/resources`)
+      const data = await response.text()
+      content.innerHTML = data
+    }
+
+    window.onload = () => {
+      reload()
+      const evtSource = new EventSource(`${SERVER}/event-source`)
+
+      evtSource.onmessage = function (e) {
+        reload()
+      }
+    }
+
+  </script>
+</head>
+<body>
+  <div id=content></div>
+</body>
+</html>

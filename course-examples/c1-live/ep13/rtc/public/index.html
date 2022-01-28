@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div style="display:flex;">
+      <canvas id="draw" width="600" height="600"></canvas>
+      <div id="videoCanvas">
+        <video id="camera" autoplay playsinline></video>
+      </div>
+    </div>
+
+    <div id="inputArea">
+      <input type="text" id="inputField">
+      <input type="button" id="inputSend" value="send" />
+    </div>
+    <div id="chat"></div>
+
+    <dialog id="dialog">
+      <div>
+        <label for="fn">fn</label>
+        <input type="text" id="fn" />
+      </div>
+      <div>
+        <label for="params">parameters</label>
+        <input type="text" id="params" />
+      </div>
+      <div>
+        <input type="button" id="dialogDraw" value="draw" />
+      </div>
+    </dialog>
+
+    <script src='https://unpkg.com/roughjs@latest/bundled/rough.js'></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

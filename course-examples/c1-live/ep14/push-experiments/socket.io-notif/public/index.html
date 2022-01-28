@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    const SERVER = 'localhost:8080'
+    
+    const reload = async () => {
+      const content = document.getElementById('content')
+      const response = await fetch(`http://${SERVER}/resources`)
+      const data = await response.text()
+      content.innerHTML = data
+
+    }
+
+    window.onload = () => {
+      reload()
+
+      const socket = io({
+        transports: ['websocket']
+      })
+      socket.on('event://reload', () => {
+        reload()
+      })
+    }
+  </script>
+</head>
+<body>
+  <div id="content"></div>
+</body>
+</html>
